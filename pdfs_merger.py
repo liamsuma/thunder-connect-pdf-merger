@@ -3,12 +3,12 @@ import glob
 from PyPDF2 import PdfFileReader, PdfFileWriter, PdfFileMerger
 from pdfrw import PdfReader, PdfWriter
 
-input_paths = '/Users/Su/Desktop/dummy_pdfs' #this is a relative path and need to change directory
+input_paths = '/Users/Su/Desktop/dummy_pdfs' # this is a relative path and need to change its directory
 os.chdir(input_paths) 
 
 x = [a for a in os.listdir(input_paths) if a.endswith(".pdf")]
 
-###After changing directory to the current path - need to loop through all pdf files###
+# after changing the directory to the current path, then needs to loop through all pdf files 
 
 pdf_merger = PdfFileMerger()
 pdf_writer = PdfFileWriter()
